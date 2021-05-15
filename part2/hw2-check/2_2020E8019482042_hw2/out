@@ -1,0 +1,34 @@
+/home/bdms/setup/GraphLite-0.20/bin/graphlite 0 /home/bdms/setup/GraphLite-0.20/bin/start-worker /home/bdms/homework/hw2/part2/hw2-check/CheckGraphColor/CheckGraphColor.so /home/bdms/homework/hw2/part2/hw2-check/sandbox/check-input /home/bdms/homework/hw2/part2/hw2-check/sandbox/check-output -v
+master run
+parseCmdArg
+loadUserFile
+startWorkers
+worker 1 cmd: ssh localhost 'cd /home/bdms/homework/hw2/part2/hw2-check/sandbox; /home/bdms/setup/GraphLite-0.20/bin/start-worker /home/bdms/setup/GraphLite-0.20/bin/graphlite 1 /home/bdms/homework/hw2/part2/hw2-check/CheckGraphColor/CheckGraphColor.so /home/bdms/homework/hw2/part2/hw2-check/sandbox/check-input /home/bdms/homework/hw2/part2/hw2-check/sandbox/check-output -v 1'
+init
+manageSuperstep
+Receiver: accept all client success
+Sender: connect all server success
+received WM_BEGIN
+MW_BEGIN: 1
+step into sendAll
+sent MW_BEGIN to worker[1]
+sent MW_BEGIN
+-----------------------------------------
+superstep: 0
+received WM_CURSSFINISH
+MW_NEXTSSSTART: 3
+step into sendAll
+sent MW_NEXTSSSTART to worker[1]
+sent MW_NEXTSSSTART
+-----------------------------------------
+superstep: 1
+received WM_CURSSFINISH
+MW_END: 4
+step into sendAll
+sent MW_END to worker[1]
+sent MW_END
+received WM_END
+terminate
+Sender: closeAllSocket
+Receiver: closeAllSocket
+elapsed time: 0.015063 seconds

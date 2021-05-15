@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## set up input for part1
+hdfs dfs -rm -r -f /hw2
+hdfs dfs -mkdir -p /hw2/part1-input
+hdfs dfs -put ./part1-input/* /hw2/part1-input/
+hdfs dfs -ls /hw2/part1-input/
+
+
+
